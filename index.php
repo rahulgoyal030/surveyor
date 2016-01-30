@@ -18,6 +18,7 @@
  <meta charset="UTF-8">
  <script type="text/javascript" src="fb_login_script.js" ></script> 
  <script type="text/javascript" src="google_login_script.js"></script>
+ <script type="text/javascript" src="logout_script.js"></script>
  <script src="jquery-1.12.0.min.js"></script>
  
  <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -39,9 +40,9 @@
 
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-<a href="#" onclick="signOut()">Sign out</a>
 
-<button onclick="fbLogoutUser()">fb logout</button>
+
+<button onclick="logout()"> logout</button>
 
 
 

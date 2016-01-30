@@ -89,6 +89,8 @@
                     console.log(response);
                     //echo what the server sent back...
                     //window.location.replace("/surveyor/home.php");
+
+                    
                 }
             });
 

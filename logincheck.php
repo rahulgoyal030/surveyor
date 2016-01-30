@@ -17,12 +17,8 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $username = $_POST['id'];
 $source = $_POST['source'];
-//echo $q . $p;
-//$str =" ";
-// foreach ($q as $key ) {
-//   # code...
-//   echo $key->name;
-//   echo $key->email;
+
+
   
 
 // }
@@ -33,10 +29,13 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-        $_SESSION["loginSource"] = "$source";
+       
         $_SESSION["username"] = "$username";
+        $cookie_name = "login_source";
+        $cookie_value = "$source";
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30*15), "/");    //  this set the cookie for 15 days
 
-        echo   $_SESSION["loginSource"] ;
+        echo   $_SESSION["username"] ;
        //   header('Location: /surveyor/home.php');   // change this according to page
         
 
@@ -46,8 +45,11 @@ else {
     
     $sql = " INSERT INTO `users`(`id`, `username`, `name`, `email` , `source`) VALUES (null,'$username', '$name', '$email' , '$source')";
    
-    $_SESSION["loginSource"] = "$source";
+    
      $_SESSION["username"] = "$username";
+     $cookie_name = "login_source";
+     $cookie_value = "$source";
+     setcookie($cookie_name, $cookie_value, time() + (86400 * 30*15), "/");    //  this set the cookie for 15 days
 
         echo "new record created successfully " . $_SESSION["loginSource"] . $_SESSION["username"] ;         
 
