@@ -73,9 +73,24 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+      console.log('Successful login for: ' + response.name +  "  "+  response.email +  " " +  response.id + " " + response.gender +" " + 
+           response.age_range   );
+      
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+
+          $.ajax({
+                type: "post",
+                url: "/surveyor/logincheck.php",
+                data: {  'id' : response.id ,'name' : response.name, 'email':response.email },
+                datatype : 'JSON',
+               
+                success: function(response){
+                    console.log(response);
+                    //echo what the server sent back...
+                }
+            });
+
     });
   }
 
