@@ -9,11 +9,12 @@
   $.ajax({
                 type: "post",
                 url: "/surveyor/logincheck.php",
-                data: {  'id' : profile.getId() ,'name' : profile.getName(), 'email':profile.getEmail()  },
+                data: {  'id' : profile.getId() ,'name' : profile.getName(), 'email':profile.getEmail() , 'source' :'google'  },
                 datatype : 'JSON',
                
                 success: function(response){
                     console.log(response);
+                   //  window.location.replace("/surveyor/home.php");
                     //echo what the server sent back...
                 }
             });

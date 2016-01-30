@@ -3,7 +3,8 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "surveyor";
-//session_start();
+
+session_start();  //  start the session 
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -14,7 +15,8 @@ if (!$conn) {
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$id = $_POST['id'];
+$username = $_POST['id'];
+$source = $_POST['source'];
 //echo $q . $p;
 //$str =" ";
 // foreach ($q as $key ) {
@@ -26,31 +28,41 @@ $id = $_POST['id'];
 // }
 //echo json_encode($str);
 
-$sql = "SELECT email FROM users where email='$email'";
+$sql = "SELECT email FROM users where email='$email' AND  username='$username'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-   
+        $_SESSION["loginSource"] = "$source";
+        $_SESSION["username"] = "$username";
 
-
-          header('Location: /surveyor/home.php');   // change this according to page
+        echo   $_SESSION["loginSource"] ;
+       //   header('Location: /surveyor/home.php');   // change this according to page
         
 
     
 } 
 else {
     
-    $sql = " INSERT INTO `users`(`id`, `username`, `name`, `email`) VALUES (null,'$id', '$name', '$email')";
+    $sql = " INSERT INTO `users`(`id`, `username`, `name`, `email` , `source`) VALUES (null,'$username', '$name', '$email' , '$source')";
    
-             
+    $_SESSION["loginSource"] = "$source";
+     $_SESSION["username"] = "$username";
 
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
+        echo "new record created successfully " . $_SESSION["loginSource"] . $_SESSION["username"] ;         
+
+if (mysqli_query($conn, $sql)) 
+{
+   
+     // header('Location: /surveyor/home.php');
+      // echo "New record created successfully";
+}
+else 
+{ 
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 //echo " database entry should be done";
+
 
 
 }

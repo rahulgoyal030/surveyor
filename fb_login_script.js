@@ -11,13 +11,13 @@
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+     // document.getElementById('status').innerHTML = 'Please log ' +
+       // 'into this app.';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+     // document.getElementById('status').innerHTML = 'Please log ' +
+       // 'into Facebook.';
     }
   }
 
@@ -82,17 +82,30 @@
           $.ajax({
                 type: "post",
                 url: "/surveyor/logincheck.php",
-                data: {  'id' : response.id ,'name' : response.name, 'email':response.email },
+                data: {  'id' : response.id ,'name' : response.name, 'email':response.email , 'source' : 'fb' },
                 datatype : 'JSON',
                
                 success: function(response){
                     console.log(response);
                     //echo what the server sent back...
+                    //window.location.replace("/surveyor/home.php");
                 }
             });
 
     });
   }
+
+ // logging out script
+  function fbLogoutUser() {
+    FB.getLoginStatus(function(response) {
+        if (response && response.status === 'connected') {
+            FB.logout(function(response) {
+                console.log("log out from fb");
+            });
+        }
+    });
+}
+ 
 
 
 // <!--

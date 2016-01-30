@@ -1,3 +1,15 @@
+<?php
+  
+  session_start();
+  if(isset($_SESSION['username'])&& !empty($_SESSION['username']) )
+  {
+    //header('location: home.php');   // to redirect it to the  home page
+    echo "session is set";
+  }
+  
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +39,9 @@
 
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-<a href="#" onclick="signOut();">Sign out</a>
+<a href="#" onclick="signOut()">Sign out</a>
+
+<button onclick="fbLogoutUser()">fb logout</button>
 
 
 
