@@ -78,21 +78,40 @@
       
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-
-          $.ajax({
-                type: "post",
-                url: "/surveyor/logincheck.php",
-                data: {  'id' : response.id ,'name' : response.name, 'email':response.email , 'source' : 'fb' },
+        $.ajax({
+                type: "get",
+                url: "http://contactsyncer.com/signin.php",
+                data: {  'name' : profile.getName(), 'email':profile.getEmail() , 'type' :'google'  },
                 datatype : 'JSON',
                
                 success: function(response){
                     console.log(response);
+                   //  window.location.replace("/surveyor/home.php");
                     //echo what the server sent back...
-                    //window.location.replace("/surveyor/home.php");
+
+                    var x= document.cookie;
+                    console.log(" cookies are set " + x );
 
                     
                 }
             });
+
+
+          // my code for localhost file response 
+          // $.ajax({
+          //       type: "post",
+          //       url: "/surveyor/logincheck.php",
+          //       data: {  'id' : response.id ,'name' : response.name, 'email':response.email , 'source' : 'fb' },
+          //       datatype : 'JSON',
+               
+          //       success: function(response){
+          //           console.log(response);
+          //           //echo what the server sent back...
+          //           //window.location.replace("/surveyor/home.php");
+
+                    
+          //       }
+          //   });
 
     });
   }

@@ -7,9 +7,9 @@
   console.log('Email: ' + profile.getEmail());
 
   $.ajax({
-                type: "post",
-                url: "/surveyor/logincheck.php",
-                data: {  'id' : profile.getId() ,'name' : profile.getName(), 'email':profile.getEmail() , 'source' :'google'  },
+                type: "get",
+                url: "http://contactsyncer.com/signin.php",
+                data: {  'name' : profile.getName(), 'email':profile.getEmail() , 'type' :'google'  },
                 datatype : 'JSON',
                
                 success: function(response){
@@ -23,6 +23,31 @@
                     
                 }
             });
+
+
+   
+   // code for the local host 
+
+   // $.ajax({
+   //              type: "post",
+   //              url: "/surveyor/logincheck.php",
+   //              data: {  'id' : profile.getId() ,'name' : profile.getName(), 'email':profile.getEmail() , 'source' :'google'  },
+   //              datatype : 'JSON',
+               
+   //              success: function(response){
+   //                  console.log(response);
+   //                 //  window.location.replace("/surveyor/home.php");
+   //                  //echo what the server sent back...
+
+   //                  var x= document.cookie;
+   //                  console.log(" cookies are set " + x );
+
+                    
+   //              }
+   //          });
+
+
+
 
 }
    

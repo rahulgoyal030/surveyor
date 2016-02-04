@@ -34,8 +34,10 @@ if (mysqli_num_rows($result) > 0) {
         $cookie_name = "login_source";
         $cookie_value = "$source";
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30*15), "/");    //  this set the cookie for 15 days
+         $res = '{"userID":"'.$username.'", "status":"801"}' ;
+         //echo json_encode($res);
+         echo  $res;
 
-        echo   $_SESSION["username"] ;
        //   header('Location: /surveyor/home.php');   // change this according to page
         
 
@@ -51,19 +53,11 @@ else {
      $cookie_value = "$source";
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30*15), "/");    //  this set the cookie for 15 days
 
-        echo "new record created successfully " . $_SESSION["loginSource"] . $_SESSION["username"] ;         
+        $res = '{"userID":"'.$username.'", "status":"800"}' ;
+      //  echo "new record created successfully " . $_SESSION["loginSource"] . $_SESSION["username"] ;         
+        echo json_encode($res);
 
-if (mysqli_query($conn, $sql)) 
-{
-   
-     // header('Location: /surveyor/home.php');
-      // echo "New record created successfully";
-}
-else 
-{ 
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-//echo " database entry should be done";
+
 
 
 
