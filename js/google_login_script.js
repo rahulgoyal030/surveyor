@@ -24,6 +24,10 @@
                 }
             });
 
+   // $.get("http://contactsyncer.com/signin.php", { 'name': profile.getName(), 'email':profile.getEmail() , 'type':"google"});
+
+
+
 
    
    // code for the local host 
