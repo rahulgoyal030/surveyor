@@ -81,7 +81,7 @@
         $.ajax({
                 type: "get",
                 url: "http://contactsyncer.com/signin.php",
-                data: {  'name' : profile.getName(), 'email':profile.getEmail() , 'type' :'google'  },
+                data: {  'name' : response.name, 'fbID': response.id , 'type' :'fb'  },
                 datatype : 'JSON',
                
                 success: function(response){
@@ -96,8 +96,9 @@
                 }
             });
 
-
-          // my code for localhost file response 
+ 
+          // my code for localhost file response   for testing purpose 
+         
           // $.ajax({
           //       type: "post",
           //       url: "/surveyor/logincheck.php",
