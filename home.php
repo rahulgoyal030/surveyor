@@ -55,6 +55,17 @@
   </nav>
 
 <!-- sections for fb googlle signin button  -->
+
+
+  
+
+
+  <div class="section , center">
+    <h5>Got a Burning Question?</h5>
+    <p>Create your next survey and use the insights to make better decisions.</p>
+    <a class="waves-effect waves-light btn  lime darken-3 center center-text">Create Survey</a>
+  </div>
+
   <div class="divider"></div>
     
   <div class="row , center">
@@ -99,50 +110,8 @@
 
  <div class="container">
       <div class="row">
-        <div class="col s12 m12 l6" id="leftbox">
-          <div class="row">
-              <div class="col s12 m12 l12 lime darken-3 white-text">
-              <h5>CREATE A SURVEY</h5>
-              </div>
-              <div class="col s12 m12 l12 center-align">
-              <h4>Easily create your first survey.</h4>
-              </div>
-              <div class="col s12 m12 l12 ">
-            
-                <div class="row">
-                  <div class="col s4 m4 l4 center">
-                    <span class="fa-stack fa-2x">
-                      <i class="fa fa-circle-o fa-stack-2x"></i>
-                      <strong class="fa-stack-1x calendar-text">1</strong>
-                    </span><br/>
-                    Add Questions
-                    </div>
-                    <div class="col s4 m4 l4 center">
-                    <span class="fa-stack fa-2x">
-                      <i class="fa fa-circle-o fa-stack-2x"></i>
-                      <strong class="fa-stack-1x calendar-text">2</strong>
-                    </span><br/>
-                    Send Survey
-                    </div>
-                    <div class="col s4 m4 l4 center ">
-                    <span class="fa-stack fa-2x">
-                      <i class="fa fa-circle-o fa-stack-2x"></i>
-                      <strong class="fa-stack-1x calendar-text">3</strong>
-                    </span><br/>
-                    Analyze Results
-                    </div>
-                  </div>
-                </div>
-                <div class="col s12 m12 l12 center-align">
-                      <div class="input-field">
-                        <input placeholder="Enter A Survey Title" id="survey_title" type="text" class="validate">
-                      </div>
-                      <a class="waves-effect waves-light btn  lime darken-3 center center-text">+ Add Questions</a><br/><br/>
-                      <a href="#">Or start from out expert templates</a>
-
-                </div>
-              </div>  
-        </div>
+        
+      </div>
         <div class="col s12 m12 l6" id="leftbox">
         <div class="row">
               <div class="col s12 m12 l12 grey white-text">
@@ -151,7 +120,7 @@
               <div class="col s12 m12 l12">
                   <div class="row">
                   <div class="col s4 m3 l3 grey-text" id="icon">
-                      <i class="fa fa-pencil-square-o fa-4x"></i>
+                      <i class="medium material-icons">picture_in_picture</i>
                   </div>
                   <div class="col s8 m9 l9">
                     <h5>Design Your Survey</h5>
@@ -167,12 +136,31 @@
               <div class="col s12 m12 l12">
                   <div class="row">
                   <div class="col s4 m3 l3 grey-text" id="icon">
-                      <i class="fa fa-pencil-square-o fa-4x"></i>
+                      <i class="medium material-icons">contacts</i>
+                  </div>
+                  <div class="col s8 m9 l9">
+                    <h5>Send survey</h5>
+                    <ul type="disc">
+                    <li>send by email , weblink , or social media</li>
+                    <li>embed your survey on your blog or website</li>
+                    
+                    
+                    </ul>
+                  </div>
+                  </div>
+                  <hr/>
+              </div>
+              <div class="col s12 m12 l12">
+                  <div class="row">
+                  <div class="col s4 m3 l3 grey-text" id="icon">
+                      <i class="medium material-icons">assessment</i>
                   </div>
                   <div class="col s8 m9 l9">
                     <h5>Design Your Survey</h5>
-                    <ul type="disc">
-                    <li>Try our certified Question Bank questions</li>
+                    <ul type="square">
+                    <li>see responses come back in real-time.</li>
+                    <li>filter , crosstab , and graph your results</li>
+                    <li>Export your response in multiple formats</li>
                     
                     </ul>
                   </div>
