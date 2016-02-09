@@ -1,0 +1,10 @@
+.size_text{
+  font-size: 20px;
+}
+#leftbox{
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+#icon{
+	padding:35px;
+}

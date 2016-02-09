@@ -16,7 +16,8 @@
 <title>Surveyor</title>
 
  <meta charset="UTF-8">
- <meta name="google-signin-client_id" content="389476587833-8bkfiq7aqkgn4c96h021mbfk1qe5jppa.apps.googleusercontent.com">
+ <meta name="google-signin-client_id" content="389476587833-eq4mc44ed3ond4nuu6gtk359dff805st.apps.googleusercontent.com">
+  <!-- 389476587833-eq4mc44ed3ond4nuu6gtk359dff805st.apps.googleusercontent.com   key for contactsyncer.com -->
 
 
  <script type="text/javascript" src="js/fb_login_script.js" ></script> 
