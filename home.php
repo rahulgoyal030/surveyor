@@ -11,8 +11,7 @@
  <script type="text/javascript" src="js/logout_script.js"></script>
  <script src="js/jquery-1.12.0.min.js"></script>
  <script type="text/javascript" src="js/button_collapse.js" ></script>
- 
-
+ <script type="text/javascript" src="js/profile_info.js" ></script>
   <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"  media="screen,projection"/>
  <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

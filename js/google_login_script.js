@@ -13,12 +13,16 @@
                 datatype : 'JSON',
                
                 success: function(response){
-                    console.log(response);
-                   //  window.location.replace("/surveyor/home.php");
+                    var res = JSON.parse(response);
+                    console.log(res.userID + "  i got the user id ");
+                    
+                    setCookie("userID" , res.userID , 30);
+                    
+                    
+                     window.location.replace("/Surveyor/home.php");
                     //echo what the server sent back...
 
-                    var x= document.cookie;
-                    console.log(" cookies are set " + x );
+                    
 
                     
                 }
@@ -55,6 +59,12 @@
 
 }
    
+ function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}  
 
   
 // this function is to get cookie value
@@ -69,5 +79,3 @@ function getCookie(cname) {
     }
     return "";
 }
-
-
