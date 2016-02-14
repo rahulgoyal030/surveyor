@@ -1,15 +1,3 @@
-<?php
-  header('Access-Control-Allow-Origin: *');
-  session_start();
-  if(isset($_SESSION['username'])&& !empty($_SESSION['username']) )
-  {
-    //header('location: home.php');   // to redirect it to the  home page
-    echo "session is set";
-  }
-  
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,13 +5,12 @@
 
  <meta charset="UTF-8">
  <meta name="google-signin-client_id" content="389476587833-eq4mc44ed3ond4nuu6gtk359dff805st.apps.googleusercontent.com">
-  <!-- 389476587833-eq4mc44ed3ond4nuu6gtk359dff805st.apps.googleusercontent.com   key for contactsyncer.com -->
 
-
+<script src="js/jquery-1.12.0.min.js"></script>
  <script type="text/javascript" src="js/fb_login_script.js" ></script> 
  <script type="text/javascript" src="js/google_login_script.js"></script>
  <script type="text/javascript" src="js/logout_script.js"></script>
- <script src="js/jquery-1.12.0.min.js"></script>
+ 
  <script type="text/javascript" src="js/button_collapse.js" ></script>
  
  <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -46,7 +33,7 @@
 <!-- navigation section code -->
 <nav>
     <div class="nav-wrapper">       
-      <a href="#!" class="brand-logo">Surveyor</a>
+      <a href="#!" class="brand-logo">Participate/\/\e</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
@@ -68,8 +55,7 @@
   
   <div class="section , center ">
      <h3>Create Surveys, Get Answers</h3>
-    
-         <fb:login-button scope="public_profile,email" size="xlarge"   onlogin="checkLoginState();"></fb:login-button>
+          <button  onclick="fb_login_check()">fb login </button>
          <div class="g-signin2 " data-onsuccess="onSignIn"></div>
     
   
