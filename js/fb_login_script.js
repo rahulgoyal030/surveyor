@@ -1,5 +1,5 @@
  // This is called with the results from from FB.getLoginStatus().
-  function fb_login_check() {
+  
         function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -122,7 +122,7 @@
     });
   }
 
-  }
+  
 
  
  // logging out script

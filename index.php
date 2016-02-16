@@ -9,7 +9,6 @@
 <script src="js/jquery-1.12.0.min.js"></script>
  <script type="text/javascript" src="js/fb_login_script.js" ></script> 
  <script type="text/javascript" src="js/google_login_script.js"></script>
- <script type="text/javascript" src="js/logout_script.js"></script>
  
  <script type="text/javascript" src="js/button_collapse.js" ></script>
  
@@ -55,8 +54,8 @@
   
   <div class="section , center ">
      <h3>Create Surveys, Get Answers</h3>
-          <button  onclick="fb_login_check()">fb login </button>
-         <div class="g-signin2 " data-onsuccess="onSignIn"></div>
+         <fb:login-button scope="public_profile,email" size="xlarge"   onlogin="checkLoginState();"></fb:login-button>
+   <div class="g-signin2 " data-onsuccess="onSignIn"></div>
     
   
   </div>
