@@ -70,7 +70,7 @@
   <div class="section , center">
     <h5>Got a Burning Question?</h5>
     <p>Create your next survey and use the insights to make better decisions.</p>
-    <a class="waves-effect waves-light btn  lime darken-3 center center-text">Create Survey</a>
+    <a class="waves-effect waves-light btn  lime darken-3 center center-text" href="/Surveyor/create_survey.php" >Create Survey</a>
   </div>
 
   <div class="divider"></div>
