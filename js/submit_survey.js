@@ -1,11 +1,16 @@
-$(document).ready( function () {
+$(document).ready(function() {
+    $('select').material_select();
+ });
 	
+$(document).ready( function () {
+
+
 	$("#submit").click(function(){
 
  				console.log($("#date").val() + " " + $("#title").val());
  				var userid= getCookie("userID");
  				var title = $("#title").val();
- 				var category = $("category").val();
+ 				var category = $("#category").val();
  				var date= $("#date").val();
 
  				var yy = date.slice(0,4);
@@ -14,7 +19,7 @@ $(document).ready( function () {
  				console.log(yy+" "+ mm+ " "+dd);
 
  				var day = dd+"-"+mm+"-"+yy;
- 				console.log(day);
+ 				console.log(day  +  " " + category);
 
  				$.ajax({
                 type: "get",

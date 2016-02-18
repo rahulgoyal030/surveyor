@@ -77,12 +77,32 @@
     </div>
 </div>
 
-<div class="row  center">
+<!-- <div class="row  center">
     <div class="input-field col s12 l6">
       <input  id="category" type="text" placeholder="Category" class="validate" required>
       
     </div>
+</div> -->
+
+<div class="row  center">
+   <div class="input-field col s12">
+    <select  id="category" >
+      <option value=""  disabled selected>Choose the category</option>
+      <option value="community">Community</option>
+      <option value="education">Education</option>
+      <option value="events">Events</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="human_resources">Human Resources</option>
+      <option value="just_for_fun">Just For Fun</option>
+      <option value="market_research">Market Research</option>
+      <option value="customer_satisfaction">Customer Satisfaction</option>
+      <option value="non-profit">Non-Profit</option>
+      <option value="political">Political</option>
+    </select>
+    
+  </div>
 </div>
+
 
   
 <div class="row  center">
