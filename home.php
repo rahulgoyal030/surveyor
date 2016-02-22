@@ -43,15 +43,15 @@
       <a href="#!" class="brand-logo">Participate/\/\e</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">My surveys</a></li>
+        <li><a href="/Surveyor/my_survey_list.php">My surveys</a></li>
         <li><a href="badges.html">Account</a></li>
         <li><a href="collapsible.html">Upgrade</a></li>
         <li><a href="mobile.html">About</a></li>
         <li><a href="mobile.html">Help</a></li>
-        <li><a href="#" id="#logout" >Logout</a></li>
+        <li><a href="#" id="#logout1" >Logout</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">My surveys</a></li>
+        <li><a href="/Surveyor/my_survey_list.php">My surveys</a></li>
         <li><a href="badges.html">Account</a></li>
         <li><a href="collapsible.html">Upgrade</a></li>
         <li><a href="mobile.html">About</a></li>
