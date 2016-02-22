@@ -19,11 +19,12 @@ $date = $input['date'];
     //$userID = '1';
     //$surveyID = uniqid();
     //$surveyTitle = 'C';
-    
+    //echo  "userid : " . $userID ;
     $query = "INSERT INTO SurveyInfo VALUES ('$userID', '$surveyID', '$surveyTitle', '$category', '$date')";
     mysql_query($query) or die("error");
     $resultArray['status'] = '800';
     $resultArray['surveyID'] = $surveyID;
+    
     echo json_encode($resultArray);
     
     

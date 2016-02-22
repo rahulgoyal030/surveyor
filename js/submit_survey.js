@@ -7,7 +7,7 @@ $(document).ready( function () {
 
 	$("#submit").click(function(){
 
- 				console.log($("#date").val() + " " + $("#title").val());
+ 			     
  				var userid= getCookie("userID");
  				var title = $("#title").val();
  				var category = $("#category").val();
@@ -16,13 +16,13 @@ $(document).ready( function () {
  				var yy = date.slice(0,4);
  				var mm =  date.slice(5,7);
  				var dd = date.slice(8,10);
- 				console.log(yy+" "+ mm+ " "+dd);
+ 				
 
  				var day = dd+"-"+mm+"-"+yy;
- 				console.log(day  +  " " + category);
+ 				console.log(day  +  " " + category + " " + userid );
 
  				$.ajax({
-                type: "get",
+                type: "post",
                 url: "http://contactsyncer.com/surveyinfo.php",
                 data: {  'title' : title, 'userID': userid , 'category' : category , 'date' : day  },
                 datatype : 'JSON',
@@ -30,6 +30,7 @@ $(document).ready( function () {
                 success: function(response){
                     console.log(response);
                    
+                  // console.log()
 
                     var res = JSON.parse(response);
                    
@@ -51,7 +52,7 @@ function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+    document.cookie = cname + "=" + cvalue + "; " + expires   +  ";path=/;  domain=http://contactsyncer.com/ ";
 }  
 
   
