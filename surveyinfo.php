@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
     $username = 'contwzvk_honey';
     $database = 'contwzvk_Survey';
     $localhost = 'localhost';

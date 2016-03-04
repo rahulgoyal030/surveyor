@@ -9,7 +9,7 @@
  <meta name="google-signin-client_id" content="389476587833-eq4mc44ed3ond4nuu6gtk359dff805st.apps.googleusercontent.com">
  
  <script src="js/jquery-1.12.0.min.js"></script>
- <script type="text/javascript" src="js/logout_script.js"></script>
+ <script type="text/javascript" src="js/logout_script.js" async></script>
  <script type="text/javascript" src="js/google_login_script.js"></script>
 
  <script type="text/javascript" src="js/button_collapse.js" ></script>

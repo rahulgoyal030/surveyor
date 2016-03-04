@@ -20,11 +20,13 @@ $(document).ready( function () {
 
  				var day = dd+"-"+mm+"-"+yy;
  				console.log(day  +  " " + category + " " + userid );
-
+ 				var data = " {'title' : '"+ title +"', 'userID': '" +userid+ "', 'category' : '" +category +"', 'date' :'" +day + "''}";
+ 				console.log(data);
+ 				var res = JSON.stringify(data);
  				$.ajax({
                 type: "post",
                 url: "http://contactsyncer.com/surveyinfo.php",
-                data: {  'title' : title, 'userID': userid , 'category' : category , 'date' : day  },
+                data:  res,
                 datatype : 'JSON',
                
                 success: function(response){
@@ -32,7 +34,7 @@ $(document).ready( function () {
                    
                   // console.log()
 
-                    var res = JSON.parse(response);
+               //     var res = JSON.parse(response);
                    
                    //  window.location.replace("/Surveyor/home.php");
                     //echo what the server sent back...
